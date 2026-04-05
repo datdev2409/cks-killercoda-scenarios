@@ -12,8 +12,9 @@ You will see `kubeadm` and `kubeadm.sha256`.
 A checksum mathematically calculates a unique, fixed-length hash for a file. By comparing the hash of our locally downloaded binary against the official hash published by the Kubernetes release team, we can guarantee that the file content hasn't been corrupted over the network download or tampered with by an attacker.
 
 ### The `--check` Option
-To perform this verification, we use the `sha256sum --check` command. 
-The `--check` option simply automates the comparison. It reads the `.sha256` file, computes the hash for the local binary, and verifies they match. 
+We *could* simply run `sha256sum kubeadm` to calculate the hash, and then manually compare that long string against the official text file. However, to eliminate human error, we can automate this verification using the `--check` option. 
+
+The `--check` option automates the comparison for us: it reads our `.sha256` file, computes the actual hash for the local `kubeadm` binary, and verifies that they perfectly match. 
 *Note: The `.sha256` file must strictly follow the format `<hash>  <filename>` (with exactly two spaces separating the hash and filename) for the `--check` flag to parse it correctly!*
 
 Let's verify `kubeadm`:
