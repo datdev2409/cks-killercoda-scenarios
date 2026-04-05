@@ -16,9 +16,11 @@ while [ ! -f $CONFIG ]; do sleep 1; done
 #     enabled: false
 sed -i '/anonymous:/{n;s/enabled: false/enabled: true/;}' $CONFIG
 
-# 2. Disable Kubelet authorization by removing the authorization block completely
-# This forces the Kubelet to default to AlwaysAllow for authorization
-sed -i '/^authorization:/,/mode: Webhook/d' $CONFIG
+# 2. Disable Kubelet authorization by explicitly setting it to AlwaysAllow.
+# Removing the block defaults to Webhook in newer versions, so we must be explicit!
+sed -i '/^authorization:/,+2d' $CONFIG || true
+echo "authorization:" >> $CONFIG
+echo "  mode: AlwaysAllow" >> $CONFIG
 
 # 3. Enable read-only port 10255
 # If readOnlyPort exists, replace it, else append it.
