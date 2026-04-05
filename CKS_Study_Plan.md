@@ -1,41 +1,41 @@
 # CKS Study Plan
 
 ## Cluster Setup (15%)
-- [x] Use Network security policies to restrict cluster level access
-- [x] Use CIS benchmark to review the security configuration of Kubernetes components (etcd, kubelet, kubedns, kubeapi)
-- [x] Properly set up Ingress with TLS
-- [x] Protect node metadata and endpoints
-    - [x] Protecting Cloud Provider Metadata APIs (IMDS)
-    - [x] Protecting the Kubelet API Endpoints
-- [x] Verify platform binaries before deploying
+- [x] Use Network security policies to restrict cluster level access `[Link](https://killercoda.com/datdev2409/scenario/cks-network-policies)`
+- [x] Use CIS benchmark to review the security configuration of Kubernetes components (etcd, kubelet, kubedns, kubeapi) `[Link](https://killercoda.com/datdev2409/scenario/cks-cis-benchmark)`
+- [x] Properly set up Ingress with TLS `[Link](https://killercoda.com/datdev2409/scenario/cks-ingress-tls)`
+- [x] Protect node metadata and endpoints `[Link](https://killercoda.com/datdev2409/scenario/cks-node-metadata)`
+    - [x] Protecting Cloud Provider Metadata APIs (IMDS) `[Link](https://killercoda.com/datdev2409/scenario/cks-cloud-metadata)`
+    - [x] Protecting the Kubelet API Endpoints `[Link](https://killercoda.com/datdev2409/scenario/cks-kubelet-hardening)`
+- [x] Verify platform binaries before deploying `[Link](https://killercoda.com/datdev2409/scenario/cks-verify-binaries)`
 
 ## Cluster Hardening (15%)
-- [ ] Use Role Based Access Controls to minimize exposure
-- [ ] Exercise caution in using service accounts e.g. disable defaults, minimize permissions on newly created ones
-- [ ] Restrict access to Kubernetes API
-- [ ] Upgrade Kubernetes to avoid vulnerabilities
+- [ ] Use Role Based Access Controls to minimize exposure `[Link](https://killercoda.com/datdev2409/scenario/cks-rbac)`
+- [ ] Exercise caution in using service accounts e.g. disable defaults, minimize permissions on newly created ones `[Link](https://killercoda.com/datdev2409/scenario/cks-service-accounts)`
+- [ ] Restrict access to Kubernetes API `[Link](https://killercoda.com/datdev2409/scenario/cks-api-restriction)`
+- [ ] Upgrade Kubernetes to avoid vulnerabilities `[Link](https://killercoda.com/datdev2409/scenario/cks-kube-upgrade)`
 
 ## System Hardening (10%)
-- [ ] Minimize host OS footprint (reduce attack surface)
-- [ ] Using least-privilege identity and access management
-- [ ] Minimize external access to the network
-- [ ] Appropriately use kernel hardening tools such as AppArmor, seccomp
+- [ ] Minimize host OS footprint (reduce attack surface) `[Link](https://killercoda.com/datdev2409/scenario/cks-os-footprint)`
+- [ ] Using least-privilege identity and access management `[Link](https://killercoda.com/datdev2409/scenario/cks-iam-least-privilege)`
+- [ ] Minimize external access to the network `[Link](https://killercoda.com/datdev2409/scenario/cks-network-access)`
+- [ ] Appropriately use kernel hardening tools such as AppArmor, seccomp `[Link](https://killercoda.com/datdev2409/scenario/cks-kernel-hardening)`
 
 ## Minimize Microservice Vulnerabilities (20%)
-- [ ] Use appropriate pod security standards
-- [ ] Manage Kubernetes secrets
-- [ ] Understand and implement isolation techniques (multi-tenancy, sandboxed containers, etc.)
-- [ ] Implement Pod-to-Pod encryption (Cilium, Istio)
+- [ ] Use appropriate pod security standards `[Link](https://killercoda.com/datdev2409/scenario/cks-pod-security)`
+- [ ] Manage Kubernetes secrets `[Link](https://killercoda.com/datdev2409/scenario/cks-manage-secrets)`
+- [ ] Understand and implement isolation techniques (multi-tenancy, sandboxed containers, etc.) `[Link](https://killercoda.com/datdev2409/scenario/cks-workload-isolation)`
+- [ ] Implement Pod-to-Pod encryption (Cilium, Istio) `[Link](https://killercoda.com/datdev2409/scenario/cks-pod-encryption)`
 
 ## Supply Chain Security (20%)
-- [ ] Minimize base image footprint
-- [ ] Understand your supply chain (e.g. SBOM, CI/CD, artifact repositories)
-- [ ] Secure your supply chain (permitted registries, sign and validate artifacts, etc.)
-- [ ] Perform static analysis of user workloads and container images (e.g. Kubesec, KubeLinter)
+- [ ] Minimize base image footprint `[Link](https://killercoda.com/datdev2409/scenario/cks-base-image)`
+- [ ] Understand your supply chain (e.g. SBOM, CI/CD, artifact repositories) `[Link](https://killercoda.com/datdev2409/scenario/cks-supply-chain)`
+- [ ] Secure your supply chain (permitted registries, sign and validate artifacts, etc.) `[Link](https://killercoda.com/datdev2409/scenario/cks-secure-supply-chain)`
+- [ ] Perform static analysis of user workloads and container images (e.g. Kubesec, KubeLinter) `[Link](https://killercoda.com/datdev2409/scenario/cks-static-analysis)`
 
 ## Monitoring, Logging and Runtime Security (20%)
-- [ ] Perform behavioral analytics to detect malicious activities
-- [ ] Detect threats within physical infrastructure, apps, networks, data, users and workloads
-- [ ] Investigate and identify phases of attack and bad actors within the environment
-- [ ] Ensure immutability of containers at runtime
-- [ ] Use Kubernetes audit logs to monitor access
+- [ ] Perform behavioral analytics to detect malicious activities `[Link](https://killercoda.com/datdev2409/scenario/cks-behavioral-analytics)`
+- [ ] Detect threats within physical infrastructure, apps, networks, data, users and workloads `[Link](https://killercoda.com/datdev2409/scenario/cks-threat-detection)`
+- [ ] Investigate and identify phases of attack and bad actors within the environment `[Link](https://killercoda.com/datdev2409/scenario/cks-incident-investigation)`
+- [ ] Ensure immutability of containers at runtime `[Link](https://killercoda.com/datdev2409/scenario/cks-immutable-containers)`
+- [ ] Use Kubernetes audit logs to monitor access `[Link](https://killercoda.com/datdev2409/scenario/cks-audit-logs)`
