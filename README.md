@@ -11,6 +11,7 @@ This repository contains custom-built, browser-based, hands-on scenarios focused
 - **`.agents/`**: Contains AI workflows and skills to help rapidly construct and scaffold new scenarios.
 
 ### Helpful Resources
+- [CKS Study Plan](./CKS_Study_Plan.md)
 - [Killercoda Creator Documentation](https://killercoda.com/creators)
 
 ### 🤖 AI Generation & Validation
