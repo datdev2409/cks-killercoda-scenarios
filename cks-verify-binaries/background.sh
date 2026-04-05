@@ -17,4 +17,12 @@ echo "  kubelet" >> kubelet.sha256
 # Tamper with the kubelet binary slightly to break the hash
 echo "malicious_payload" >> kubelet
 
+# Verify that all files were successfully downloaded and are not empty
+for file in kubeadm kubeadm.sha256 kubelet kubelet.sha256; do
+    if [ ! -s "$file" ]; then
+        echo "Error: Required file $file is missing or empty. Background initialization failed!" >&2
+        exit 1
+    fi
+done
+
 echo "done" > /opt/background-finished
