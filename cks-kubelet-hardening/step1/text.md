@@ -16,7 +16,7 @@ Your task is to modify the Kubelet configuration on the control plane node to me
 3. Ensure **authorization** is securely delegated back to the API Server (set mode to `Webhook`).
 
 To find the configuration file, you should never blindly guess the path! Always check the running process to see what `--config` flag the Kubelet was started with:
-`ps aux | grep kubelet | grep -- --config`{{execute}}
+`ps aux | grep kubelet`{{execute}}
 
 Once you identify the path from the output (it is typically `/var/lib/kubelet/config.yaml`), edit the file directly:
 `vi /var/lib/kubelet/config.yaml`{{execute}}
