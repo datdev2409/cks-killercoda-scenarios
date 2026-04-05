@@ -13,13 +13,14 @@ Now try hitting the **secure port (10250)** anonymously (without a token):
 Your task is to modify the Kubelet configuration on the control plane node to meet the following security requirements:
 1. Ensure the **read-only port** is disabled (set to `0`).
 2. Prevent **unauthenticated access** (disable anonymous authentication).
+3. Ensure **authorization** is securely delegated back to the API Server (set mode to `Webhook`).
 
 The primary configuration file for the Kubelet is located at `/var/lib/kubelet/config.yaml`. 
 
 You can edit the file directly using:
 `vi /var/lib/kubelet/config.yaml`{{execute}}
 
-*Hint: Look for the `authentication.anonymous.enabled` key inside the file to change it to `false` and set `readOnlyPort: 0`.*
+*Hint: Look for the `authentication.anonymous.enabled` key to change to `false`, add a `readOnlyPort: 0` key, and ensure `authorization.mode` is `Webhook`.*
 
 Once you have saved your changes, be sure to restart the kubelet service:
 `systemctl restart kubelet`{{execute}}

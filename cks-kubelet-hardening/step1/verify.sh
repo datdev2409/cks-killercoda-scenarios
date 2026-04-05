@@ -23,6 +23,13 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+# Verify authorization mode is Webhook
+grep -q -i "mode: Webhook" "$CONFIG_FILE"
+if [ $? -ne 0 ]; then
+    echo "Authorization mode is not set to Webhook"
+    exit 1
+fi
+
 # Finally check if kubelet is running and healthy
 systemctl is-active kubelet -q
 if [ $? -ne 0 ]; then
