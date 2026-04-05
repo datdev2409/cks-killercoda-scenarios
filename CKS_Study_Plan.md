@@ -7,7 +7,7 @@
 - [x] Protect node metadata and endpoints
     - [x] Protecting Cloud Provider Metadata APIs (IMDS)
     - [x] Protecting the Kubelet API Endpoints
-- [ ] Verify platform binaries before deploying
+- [x] Verify platform binaries before deploying
 
 ## Cluster Hardening (15%)
 - [ ] Use Role Based Access Controls to minimize exposure
