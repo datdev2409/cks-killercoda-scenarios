@@ -1,0 +1,26 @@
+{
+  "title": "CKS: Harden Kubelet Configuration",
+  "description": "Learn how to secure the kubelet by removing the read-only port and restricting unauthenticated access.",
+  "details": {
+    "steps": [
+      {
+        "title": "Harden Kubelet Access",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh",
+        "foreground": "step1/foreground.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}
