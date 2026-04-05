@@ -15,9 +15,10 @@ Your task is to modify the Kubelet configuration on the control plane node to me
 2. Prevent **unauthenticated access** (disable anonymous authentication).
 3. Ensure **authorization** is securely delegated back to the API Server (set mode to `Webhook`).
 
-The primary configuration file for the Kubelet is located at `/var/lib/kubelet/config.yaml`. 
+To find the configuration file, you should never blindly guess the path! Always check the running process to see what `--config` flag the Kubelet was started with:
+`ps aux | grep kubelet | grep -- --config`{{execute}}
 
-You can edit the file directly using:
+Once you identify the path from the output (it is typically `/var/lib/kubelet/config.yaml`), edit the file directly:
 `vi /var/lib/kubelet/config.yaml`{{execute}}
 
 *Hint: Look for the `authentication.anonymous.enabled` key to change to `false`, add a `readOnlyPort: 0` key, and ensure `authorization.mode` is `Webhook`.*
