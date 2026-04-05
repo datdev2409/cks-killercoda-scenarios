@@ -37,4 +37,18 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+# Verify read-only port is disabled (curl should fail to connect)
+curl -m 2 -sk http://localhost:10255/pods > /dev/null 2>&1
+if [ $? -eq 0 ]; then
+    echo "Read-only port 10255 is still accessible"
+    exit 1
+fi
+
+# Verify secure port requires authentication (should return Unauthorized)
+OUTPUT=$(curl -m 2 -sk https://localhost:10250/pods 2>&1)
+if [[ "$OUTPUT" != *"Unauthorized"* ]]; then
+    echo "Secure port 10250 did not return Unauthorized"
+    exit 1
+fi
+
 exit 0

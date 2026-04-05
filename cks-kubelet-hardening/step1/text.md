@@ -33,4 +33,3 @@ Now that you have restarted the Kubelet, try running the exact same queries agai
 
 When you see that access is properly restricted, press the Check button below!
 
-{{verify(verify.sh)}}
