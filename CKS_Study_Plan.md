@@ -37,7 +37,7 @@
 ## Cluster Hardening (15%)
 
 ### Use Role Based Access Controls to minimize exposure
-- [ ] Theory
+- [x] Theory
 - [ ] Practice
   - [Official: RBAC ServiceAccount Permissions](https://killercoda.com/killer-shell-cks/scenario/rbac-serviceaccount-permissions)
   - [Custom: cks-rbac](https://killercoda.com/datdev2409/scenario/cks-rbac)
