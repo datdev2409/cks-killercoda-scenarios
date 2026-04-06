@@ -10,8 +10,11 @@ done
 # Create a script that tries to write to a forbidden path
 cat << 'EOF' > /usr/local/bin/test-app.sh
 #!/bin/bash
-touch /tmp/forbidden
-echo "Successfully touched /tmp/forbidden"
+if echo "test" > /tmp/forbidden 2>/dev/null; then
+  echo "Successfully touched /tmp/forbidden"
+else
+  echo "Permission denied"
+fi
 EOF
 chmod +x /usr/local/bin/test-app.sh
 
