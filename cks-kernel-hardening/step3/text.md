@@ -6,18 +6,21 @@ AppArmor profiles can operate in two modes:
 
 ### Your Task:
 
-1. **Switch to Complain Mode**: Use the `-C` (complain) flag with `apparmor_parser` to reload our existing host profile into complain mode. By using `-r` (replace), we overwrite the strict profile with the complain-mode profile in the kernel.
+1. **Remove Explicit Deny**: Here is a vital CKS concept: **Complain mode bypasses IMPLICIT denies, but explicit `deny` rules are STILL strictly enforced!** 
+   Since our `/root/host-profile` has an explicit `deny /tmp/forbidden w,`, complain mode will STILL block it!
+   Open `/root/host-profile` using `nano` or `vim`, and **delete** the `deny /tmp/forbidden w,` line.
+
+2. **Switch to Complain Mode**: Now, use the `-C` (complain) flag with `apparmor_parser` to reload the edited host profile into the kernel. 
    ```bash
    apparmor_parser -r -C /root/host-profile
    ```{{execute}}
-   *Note: While Ubuntu provides an `aa-complain` helper script, `apparmor_parser` is the lowest-level and most reliable way to force a profile mode without parsing conflicting files elsewhere on the filesystem!*
 
-2. **Run the Script**: Execute `/usr/local/bin/test-app.sh` again. This time, it will successfully touch the forbidden file because AppArmor is no longer enforcing the denial!
+3. **Run the Script**: Execute `/usr/local/bin/test-app.sh` again. This time, it will successfully touch the forbidden file because AppArmor is no longer enforcing the denial!
    ```bash
    /usr/local/bin/test-app.sh
    ```{{execute}}
 
-3. **Check the Logs**: Now prove that AppArmor still saw it and complained! Search the syslog or kernel ring buffer (`dmesg`) for the AppArmor audit message indicating an "ALLOWED" event for the requested `w` (write) permission.
+4. **Check the Logs**: Now prove that AppArmor still saw it and complained! Search the syslog or kernel ring buffer (`dmesg`) for the AppArmor audit message indicating an "ALLOWED" event for the requested `w` (write) permission.
    ```bash
    grep -i apparmor /var/log/syslog | tail
    ```{{execute}}
