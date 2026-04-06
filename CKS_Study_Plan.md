@@ -38,33 +38,33 @@
 
 ### Use Role Based Access Controls to minimize exposure
 - [x] Theory
-- [ ] Practice
+- [x] Practice
   - [Official: RBAC ServiceAccount Permissions](https://killercoda.com/killer-shell-cks/scenario/rbac-serviceaccount-permissions)
   - [Custom: cks-rbac](https://killercoda.com/datdev2409/scenario/cks-rbac)
 
 ### Exercise caution in using service accounts e.g. disable defaults, minimize permissions on newly created ones
-- [ ] Theory
+- [x] Theory
 - [ ] Practice
   - [Official: Secret ServiceAccount Pod](https://killercoda.com/killer-shell-cks/scenario/secret-serviceaccount-pod)
   - [Custom: cks-service-accounts](https://killercoda.com/datdev2409/scenario/cks-service-accounts)
 
 ### Restrict access to Kubernetes API
-- [ ] Theory
-- [ ] Practice
-  - [Official: Apiserver NodeRestriction](https://killercoda.com/killer-shell-cks/scenario/apiserver-noderestriction)
+- [x] Theory
+- [x] Practice
+  - [Official: Auditing Enable Audit Logging](https://killercoda.com/killer-shell-cks/scenario/auditing-enable-audit-logs)
   - [Custom: cks-api-restriction](https://killercoda.com/datdev2409/scenario/cks-api-restriction)
 
 ### Upgrade Kubernetes to avoid vulnerabilities
-- [ ] Theory
-- [ ] Practice
+- [x] Theory
+- [x] Practice
   - [Official: Exam Desktop](https://killercoda.com/killer-shell-cks/scenario/playground-exam-desktop)
   - [Custom: cks-kube-upgrade](https://killercoda.com/datdev2409/scenario/cks-kube-upgrade)
 
 ## System Hardening (10%)
 
 ### Minimize host OS footprint (reduce attack surface)
-- [ ] Theory
-- [ ] Practice
+- [x] Theory
+- [x] Practice
   - [Official: System Hardening Close Open Ports](https://killercoda.com/killer-shell-cks/scenario/system-hardening-close-open-ports)
   - [Custom: cks-os-footprint](https://killercoda.com/datdev2409/scenario/cks-os-footprint)
 
