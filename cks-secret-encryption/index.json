@@ -1,0 +1,51 @@
+{
+  "title": "CKS: Manage Kubernetes Secrets (Encryption at Rest)",
+  "description": "Learn how to encrypt Kubernetes Secrets at rest in etcd, verify encryption using etcdctl, perform key rotation, and expand encryption to other resources.",
+  "details": {
+    "steps": [
+      {
+        "title": "Enable Encryption for the First Time",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh",
+        "background": "background.sh"
+      },
+      {
+        "title": "Verify Encryption State via etcdctl",
+        "text": "step2/text.md",
+        "verify": "step2/verify.sh"
+      },
+      {
+        "title": "Encrypting Pre-existing Secrets",
+        "text": "step3/text.md",
+        "verify": "step3/verify.sh"
+      },
+      {
+        "title": "Key Rotation (Zero Downtime)",
+        "text": "step4/text.md",
+        "verify": "step4/verify.sh"
+      },
+      {
+        "title": "Reverting to Plaintext (Identity Provider)",
+        "text": "step5/text.md",
+        "verify": "step5/verify.sh"
+      },
+      {
+        "title": "Multi-Resource Encryption",
+        "text": "step6/text.md",
+        "verify": "step6/verify.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}
