@@ -69,34 +69,34 @@
   - [Custom: cks-os-footprint](https://killercoda.com/datdev2409/scenario/cks-os-footprint)
 
 ### Using least-privilege identity and access management
-- [ ] Theory
-- [ ] Practice
+- [x] Theory
+- [x] Practice
   - [Official: Privilege Escalation Containers](https://killercoda.com/killer-shell-cks/scenario/privilege-escalation-containers)
   - [Custom: cks-iam-least-privilege](https://killercoda.com/datdev2409/scenario/cks-iam-least-privilege)
 
 ### Minimize external access to the network
-- [ ] Theory
-- [ ] Practice
+- [x] Theory
+- [x] Practice
   - [Official: System Hardening Manage Packages](https://killercoda.com/killer-shell-cks/scenario/system-hardening-manage-packages)
   - [Custom: cks-network-access](https://killercoda.com/datdev2409/scenario/cks-network-access)
 
 ### Appropriately use kernel hardening tools such as AppArmor, seccomp
-- [ ] Theory
-- [ ] Practice
+- [x] Theory
+- [x] Practice
   - [Official: AppArmor](https://killercoda.com/killer-shell-cks/scenario/apparmor)
   - [Custom: cks-kernel-hardening](https://killercoda.com/datdev2409/scenario/cks-kernel-hardening)
 
 ## Minimize Microservice Vulnerabilities (20%)
 
 ### Use appropriate pod security standards
-- [ ] Theory
-- [ ] Practice
+- [x] Theory
+- [x] Practice
   - [Official: Container Hardening](https://killercoda.com/killer-shell-cks/scenario/container-hardening)
   - [Custom: cks-pod-security](https://killercoda.com/datdev2409/scenario/cks-pod-security)
 
 ### Manage Kubernetes secrets
-- [ ] Theory
-- [ ] Practice
+- [x] Theory
+- [x] Practice
   - [Official: Secret ETCD Encryption](https://killercoda.com/killer-shell-cks/scenario/secret-etcd-encryption)
   - [Custom: cks-manage-secrets](https://killercoda.com/datdev2409/scenario/cks-manage-secrets)
 
