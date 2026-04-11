@@ -1,0 +1,36 @@
+{
+  "title": "CKS: Sandbox Environments (gVisor & Kata)",
+  "description": "Configure Kubernetes to use Sandbox RuntimeClasses, refactor pods to run securely, and troubleshoot scheduling issues related to sandboxing.",
+  "details": {
+    "steps": [
+      {
+        "title": "Create a RuntimeClass for a Sandbox",
+        "text": "step1/text.md",
+        "verify": "step1/verify.sh",
+        "background": "background.sh"
+      },
+      {
+        "title": "Refactor an Existing Pod",
+        "text": "step2/text.md",
+        "verify": "step2/verify.sh"
+      },
+      {
+        "title": "Verification & Troubleshooting",
+        "text": "step3/text.md",
+        "verify": "step3/verify.sh"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}
